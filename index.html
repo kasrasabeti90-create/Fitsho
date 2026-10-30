@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#17231f">
+<meta name="description" content="فیت شو؛ کتابخانه ساده و موبایل‌پسند حرکات تمرینی با راهنمای اجرای صحیح.">
+<title>فیت شو | کتابخانه حرکات تمرینی</title>
+<style>
+:root{--ink:#17231f;--muted:#65736c;--paper:#f6f7f2;--card:#fff;--accent:#c8f169;--line:#e2e7df;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}
+a{color:inherit}button,input{font:inherit}.wrap{width:min(1100px,92%);margin:auto}
+header{padding:18px 0;border-bottom:1px solid var(--line);background:#f6f7f2}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{font-weight:900;font-size:1.4rem;letter-spacing:-1px;text-decoration:none}.brand span{display:inline-grid;place-items:center;background:var(--accent);width:38px;height:38px;border-radius:12px;margin-left:8px}
+.nav a:not(.brand){text-decoration:none;font-size:.92rem;color:var(--muted)}
+.hero{padding:54px 0 35px;display:grid;grid-template-columns:1.3fr .7fr;gap:26px;align-items:center}
+.kicker{font-size:.82rem;font-weight:bold;color:#536d39;letter-spacing:.2px}.hero h1{font-size:clamp(2rem,5vw,3.8rem);line-height:1.35;letter-spacing:-1.8px;margin:8px 0 15px}.hero p{max-width:600px;color:var(--muted);margin:0 0 22px}
+.hero-card{background:var(--ink);color:white;border-radius:28px;padding:28px;min-height:225px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden;position:relative}.hero-card:after{content:"";position:absolute;width:170px;height:170px;border:28px solid var(--accent);border-radius:50%;left:-35px;bottom:-75px;opacity:.95}.hero-card strong{font-size:1.35rem;max-width:230px;position:relative;z-index:1}.hero-card small{color:#c9d1ca;position:relative;z-index:1}
+.controls{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:grid;grid-template-columns:1fr auto;gap:12px;margin:10px 0 20px}
+.search{width:100%;border:1px solid var(--line);background:#fbfcf9;border-radius:14px;padding:12px 15px;outline:none}.search:focus{border-color:#7b9e47;box-shadow:0 0 0 3px #c8f16955}
+.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:white;padding:9px 13px;border-radius:12px;cursor:pointer;font-size:.9rem}.filter.active{background:var(--ink);color:white;border-color:var(--ink)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:25px 0 14px}.section-head h2{margin:0;font-size:1.45rem}.section-head p{margin:0;color:var(--muted);font-size:.9rem}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.move{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;min-height:210px}.move-top{display:flex;justify-content:space-between;align-items:center}.emoji{display:grid;place-items:center;background:#eff5e6;border-radius:14px;width:48px;height:48px;font-size:1.5rem}.tag{font-size:.75rem;color:#5b7143;background:#f0f5e9;border-radius:99px;padding:4px 9px}.move h3{margin:13px 0 2px;font-size:1.1rem}.move p{margin:0 0 14px;color:var(--muted);font-size:.9rem}.move button{margin-top:auto;background:var(--accent);border:0;border-radius:12px;padding:10px 12px;cursor:pointer;font-weight:bold}
+.notice{background:#edf2e6;border-radius:16px;padding:14px 16px;color:#45543d;margin:24px 0;font-size:.9rem}
+.detail{margin:18px 0 40px;background:white;border:1px solid var(--line);border-radius:24px;padding:clamp(18px,4vw,30px)}.back{border:0;background:#f0f3ec;border-radius:12px;padding:8px 13px;cursor:pointer}.detail h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:12px 0 5px}.detail-intro{color:var(--muted);margin-top:0}.detail-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}.detail-box{background:#f7f8f4;border-radius:18px;padding:18px}.detail-box h3{margin:0 0 8px}.detail-box ul,.detail-box ol{padding-right:20px;margin:0}.video-box{border:1px dashed #b8c4b1;background:#f8faf5;border-radius:18px;min-height:170px;display:grid;place-items:center;text-align:center;padding:18px;color:var(--muted)}.video-box a{display:inline-block;background:var(--ink);color:white;border-radius:10px;padding:8px 12px;text-decoration:none;margin-top:8px}
+footer{border-top:1px solid var(--line);padding:22px 0 34px;color:var(--muted);font-size:.85rem}.footer-row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.hidden{display:none!important}.empty{padding:30px;text-align:center;color:var(--muted);background:white;border-radius:18px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-card{min-height:170px}.controls{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.detail-cols{grid-template-columns:1fr}.nav a:not(.brand){display:none}}
+@media(max-width:430px){.grid{grid-template-columns:1fr}.move{min-height:185px}.hero h1{font-size:2.15rem}.section-head{align-items:start;flex-direction:column}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#library"><span>ف</span> فیت شو</a><a href="#library">کتابخانه حرکات</a></div></header>
+<main class="wrap">
+<section class="hero" id="top">
+<div><div class="kicker">حرکت درست، قدم‌به‌قدم</div><h1>حرکتت را پیدا کن.<br>درست یاد بگیر.</h1><p>کتابخانه‌ای ساده برای پیدا کردن حرکت‌های تمرینی و مرور نکته‌های اجرای صحیح، با موبایل یا از روی QR کد چاپی.</p></div>
+<div class="hero-card"><strong>هر حرکت، یک راهنمای اختصاصی</strong><small>جستجو کن · انتخاب کن · یاد بگیر</small></div>
+</section>
+<section id="library">
+<div class="section-head"><h2>کتابخانه حرکات</h2><p id="count">۶ حرکت</p></div>
+<div class="controls"><input id="search" class="search" type="search" placeholder="نام حرکت یا عضله را جستجو کن…" aria-label="جستجوی حرکات"><div class="filters" id="filters"><button class="filter active" data-category="همه">همه</button><button class="filter" data-category="بالاتنه">بالاتنه</button><button class="filter" data-category="پایین‌تنه">پایین‌تنه</button><button class="filter" data-category="وزن بدن">وزن بدن</button></div></div>
+<div id="cards" class="grid"></div>
+<div id="empty" class="empty hidden">حرکتی پیدا نشد. عبارت دیگری را امتحان کن.</div>
+<div class="notice">نکته: با وزنه‌ای شروع کن که بتوانی حرکت را با کنترل انجام دهی. اگر درد تیز یا غیرعادی داشتی، تمرین را متوقف کن و از مربی واجدصلاحیت کمک بگیر.</div>
+</section>
+<section id="detail" class="detail hidden" aria-live="polite"></section>
+</main>
+<footer><div class="wrap footer-row"><span>© فیت شو — نسخه اولیه کتابخانه تمرینی</span><span>آموزش‌ها باید با ویدئوی اختصاصی یا محتوای دارای مجوز تکمیل شوند.</span></div></footer>
+<script>
+const moves = [
+{id:"squat",name:"اسکوات",en:"Squat",category:"پایین‌تنه",muscles:"چهارسر ران، باسن",emoji:"🦵",intro:"حرکتی پایه برای تقویت پایین‌تنه و تمرین کنترل بدن.",steps:["پاها را تقریباً به عرض شانه باز کن و پنجه‌ها را کمی رو به بیرون بگذار.","میان‌تنه را محکم نگه دار و لگن را عقب و پایین ببر.","تا دامنه‌ای پایین برو که بتوانی تعادل و کنترل را حفظ کنی.","با فشار یکنواخت کف پا به حالت ایستاده برگرد."],tips:["زانوها در راستای پنجه‌ها حرکت کنند.","پاشنه‌ها روی زمین بمانند.","با وزن بدن شروع کن و عجله نکن."],mistakes:["جمع شدن زانوها به سمت داخل","بلند شدن پاشنه‌ها","پایین رفتن بیشتر از دامنه‌ای که با کنترل ممکن است"],video:""},
+{id:"pushup",name:"شنا سوئدی",en:"Push-up",category:"وزن بدن",muscles:"سینه، پشت بازو، میان‌تنه",emoji:"💪",intro:"تمرینی با وزن بدن برای بالاتنه؛ در صورت نیاز از سطح بلندتر شروع کن.",steps:["دست‌ها را کمی بازتر از عرض شانه روی زمین یا سطح محکم بگذار.","بدن را از سر تا پاشنه‌ها در یک خط نگه دار.","آرنج‌ها را با زاویه‌ای راحت خم کن و سینه را به سمت سطح پایین ببر.","با کنترل به نقطه شروع برگرد."],tips:["شکم و باسن را فعال نگه دار.","اگر سخت است، شنا را روی دیوار یا میز محکم انجام بده."],mistakes:["افتادن لگن","باز شدن بیش از حد آرنج‌ها","نیمه‌کاره و سریع انجام دادن حرکت"],video:""},
+{id:"bench-press",name:"پرس سینه",en:"Bench Press",category:"بالاتنه",muscles:"سینه، پشت بازو، جلوی شانه",emoji:"🏋️",intro:"حرکت قدرتی بالاتنه که بهتر است ابتدا با مربی یا وزنه سبک یاد گرفته شود.",steps:["روی نیمکت ثابت دراز بکش و کف پاها را روی زمین قرار بده.","میله یا دمبل‌ها را با مچ تقریباً صاف کنترل کن.","وزنه را آرام پایین بیاور؛ آرنج‌ها را در زاویه‌ای راحت نگه دار.","بدون ضربه زدن، وزنه را به بالا برگردان."],tips:["برای هالتر از پایه ایمن و همراه تمرینی آگاه استفاده کن.","وزنه‌ای انتخاب کن که کنترل کامل داشته باشی."],mistakes:["جهش دادن وزنه از روی سینه","خم شدن بیش از حد مچ‌ها","استفاده از وزنه سنگین بدون تسلط"],video:""},
+{id:"lat-pulldown",name:"لت سیم‌کش",en:"Lat Pulldown",category:"بالاتنه",muscles:"عضلات پشت، دوسر بازویی",emoji:"↘️",intro:"تمرینی برای عضلات پشت با دستگاه سیم‌کش.",steps:["روی دستگاه بنشین و ران‌ها را زیر پد ثابت کن.","میله را کمی بازتر از عرض شانه بگیر.","شانه‌ها را از گوش‌ها دور نگه دار و میله را به سمت بالای سینه بکش.","آرام دست‌ها را باز کن و وزنه را کنترل‌شده بالا ببر."],tips:["بدن را زیاد به عقب تاب نده.","حرکت را با کنترل انجام بده، نه با تکان."],mistakes:["کشیدن میله پشت گردن","تاب دادن شدید بالاتنه","رها کردن سریع وزنه"],video:""},
+{id:"curl",name:"جلو بازو دمبل",en:"Dumbbell Curl",category:"بالاتنه",muscles:"دوسر بازویی",emoji:"💪",intro:"حرکتی ساده برای تمرین عضلات جلوی بازو.",steps:["صاف بایست و در هر دست یک دمبل سبک بگیر.","آرنج‌ها را نزدیک پهلو نگه دار.","دمبل‌ها را با خم کردن آرنج بالا بیاور.","آرام و بدون رها کردن وزنه به نقطه شروع برگرد."],tips:["مچ را صاف نگه دار.","از تاب دادن تنه برای بالا آوردن دمبل استفاده نکن."],mistakes:["حرکت دادن آرنج‌ها به جلو و عقب","تاب دادن بدن","پایین آوردن سریع دمبل"],video:""},
+{id:"deadlift",name:"ددلیفت",en:"Deadlift",category:"پایین‌تنه",muscles:"باسن، پشت ران، عضلات میان‌تنه و پشت",emoji:"🏋️",intro:"حرکتی چندمفصلی که یادگیری الگوی خم‌شدن از لگن در آن اهمیت زیادی دارد.",steps:["پاها را به عرض لگن قرار بده و وزنه را نزدیک بدن نگه دار.","از لگن خم شو و ستون فقرات را در وضعیت طبیعی نگه دار.","پاها را به زمین فشار بده و با صاف شدن لگن بایست.","وزنه را نزدیک پاها و با کنترل پایین بیاور."],tips:["ابتدا الگوی حرکت را با چوب سبک یا بدون وزنه تمرین کن.","برای یادگیری تکنیک از مربی واجدصلاحیت کمک بگیر."],mistakes:["گرد کردن پشت زیر بار","دور شدن وزنه از بدن","انتخاب وزنه سنگین پیش از تسلط"],video:""}
+];
+let category="همه";
+const cards=document.getElementById("cards"), search=document.getElementById("search"), empty=document.getElementById("empty"), count=document.getElementById("count"), detail=document.getElementById("detail");
+function render(){
+ const q=search.value.trim().toLocaleLowerCase("fa");
+ const shown=moves.filter(m=>(category==="همه"||m.category===category)&&[m.name,m.en,m.category,m.muscles].join(" ").toLocaleLowerCase("fa").includes(q));
+ count.textContent=shown.length+" حرکت";
+ cards.innerHTML=shown.map(m=>`<article class="move"><div class="move-top"><span class="emoji">${m.emoji}</span><span class="tag">${m.category}</span></div><h3>${m.name}</h3><p>${m.muscles}</p><button type="button" onclick="openMove('${m.id}')">مشاهده آموزش ←</button></article>`).join("");
+ empty.classList.toggle("hidden",shown.length>0);
+}
+document.getElementById("filters").addEventListener("click",e=>{const b=e.target.closest("button[data-category]");if(!b)return;category=b.dataset.category;document.querySelectorAll(".filter").forEach(x=>x.classList.toggle("active",x===b));render()});
+search.addEventListener("input",render);
+function openMove(id){
+ const m=moves.find(x=>x.id===id);if(!m)return;
+ location.hash="move/"+id;
+ detail.classList.remove("hidden");
+ detail.innerHTML=`<button class="back" onclick="backToLibrary()">← بازگشت به کتابخانه</button><h2>${m.emoji} ${m.name}</h2><p class="detail-intro">${m.intro}</p><p><strong>عضلات درگیر:</strong> ${m.muscles}</p><div class="detail-cols"><div class="detail-box"><h3>روش اجرا</h3><ol>${m.steps.map(s=>`<li>${s}</li>`).join("")}</ol></div><div class="detail-box"><h3>نکته‌های کلیدی</h3><ul>${m.tips.map(s=>`<li>${s}</li>`).join("")}</ul><h3 style="margin-top:18px">اشتباهات رایج</h3><ul>${m.mistakes.map(s=>`<li>${s}</li>`).join("")}</ul></div><div class="video-box" style="grid-column:1/-1"><div><strong>جایگاه ویدئوی آموزشی</strong><p>برای انتشار، ویدئوی ضبط‌شده خودتان یا ویدئوی دارای مجوز را به این بخش اضافه کنید.</p><small>شناسه حرکت: ${m.id}</small></div></div></div>`;
+ detail.scrollIntoView({behavior:"smooth",block:"start"});
+}
+function backToLibrary(){location.hash="library";detail.classList.add("hidden");document.getElementById("library").scrollIntoView({behavior:"smooth"})}
+function route(){const match=location.hash.match(/^#move\/(.+)$/);if(match)openMove(match[1]);else if(location.hash==="#library"||location.hash==="#top"){detail.classList.add("hidden")}}
+window.addEventListener("hashchange",()=>{const match=location.hash.match(/^#move\/(.+)$/);if(match){const m=moves.find(x=>x.id===match[1]);if(m){detail.classList.remove("hidden");renderDetailDirect(m)}}else detail.classList.add("hidden")});
+function renderDetailDirect(m){detail.innerHTML=`<button class="back" onclick="backToLibrary()">← بازگشت به کتابخانه</button><h2>${m.emoji} ${m.name}</h2><p class="detail-intro">${m.intro}</p><p><strong>عضلات درگیر:</strong> ${m.muscles}</p><div class="detail-cols"><div class="detail-box"><h3>روش اجرا</h3><ol>${m.steps.map(s=>`<li>${s}</li>`).join("")}</ol></div><div class="detail-box"><h3>نکته‌های کلیدی</h3><ul>${m.tips.map(s=>`<li>${s}</li>`).join("")}</ul><h3 style="margin-top:18px">اشتباهات رایج</h3><ul>${m.mistakes.map(s=>`<li>${s}</li>`).join("")}</ul></div><div class="video-box" style="grid-column:1/-1"><div><strong>جایگاه ویدئوی آموزشی</strong><p>ویدئوی اختصاصی یا دارای مجوز را در نسخه انتشارشده اضافه کنید.</p><small>شناسه حرکت: ${m.id}</small></div></div></div>`}
+render();route();
+</script>
+</body>
+</html>
